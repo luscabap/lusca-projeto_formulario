@@ -1,0 +1,398 @@
+:root{
+    --cor_fundo:       linear-gradient(to right, #ddfce3, #DEF5E5,#bee4ca);
+    --cor_fundoheader: linear-gradient(to right, #94c7b0, #86b39e,#6c9181);
+    --cor_fundofooter: linear-gradient(to right, #0b1414, #0f1a1a,#030505);
+
+    --cor_destaque:    #ECF9FF;
+    --cor_prim:        #ffdacc;
+    --cor_secu:        #FFFBEB;
+    --cor_font:        #213623;
+    --cor_borda:       #213623;
+
+    --font_principal: 'Roboto Slab', serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: var(--cor_fundo);
+    font-family: var(--font_principal);
+    transition: 1s;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+/* --- HEADER --- */
+.container{
+    display: flex;
+    justify-content: center;    
+}
+
+.bi{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.bi-moon{
+    display: none;
+}
+
+.container_header{
+    background-image: var(--cor_fundoheader);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 6.5em;
+    grid-template-areas: 
+        "logo lista icone"
+    ;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 1.2em auto;
+    border-radius: 8px;
+}
+
+.container_logo{
+    transform: scale(0.4);
+    grid-area: logo;
+}
+
+.link_logo{
+    padding: 0;
+}
+
+.container_lista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    grid-area: lista;
+}
+
+.lista_link{
+    text-decoration: none;
+    color: black;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.lista_link:hover{
+    background-color: black;
+    color: #c6e4cf;
+    padding: 0.3em;
+    transition: 0.5s;
+    border-radius: 2px;
+}
+
+.lista_item{
+     text-decoration: none;
+}
+
+.container_icone{
+    margin: 0 2em;
+    grid-area: icone;
+}
+
+.icone{
+    padding: 0 1em;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+}
+
+.icn_lua:hover{
+    transform: scale(1.1) rotate(20deg);
+    transition: 0.5s;
+}
+
+/* --- MAIN ---*/
+
+.container_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 60%;
+    margin: 0 auto;
+}
+
+legend{
+    background-image: var(--cor_fundo);
+    border-radius: 4px;
+    padding: 0.4em;
+}
+
+.titulo_form{
+    color: #394e45;
+    padding: 0.2em 0;
+    margin: 0.5em 0;
+}
+
+.form_div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+.box{
+    margin: 0.7em 0;
+    padding: 0.6em;
+    border-radius: 30px;
+    border: 1px solid var(--cor_borda);
+}
+
+.form_texto{
+    color: var(--cor_font);
+}
+
+.form_labels{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 51em;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+.form_nome{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nome_box{
+    width: 20em;
+    margin-left: 1.7em;
+}
+
+.sobrenome_box{
+    width: 23.5em;
+}
+
+.form_contato{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contato_box{
+    margin-right: 1em;
+    width: 21em;
+}
+
+.email_box{
+    width: 20em;
+    margin-left: 1.3em;
+    margin-right: 5.1em;
+}
+
+.form_rede{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rede_box{
+    width: 20em;
+    margin-right: 5.1em;
+}
+
+.form_options{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5em 0;
+}
+
+
+.form_cep{
+    width: 50em;
+    border-radius: 4px;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+.msg_erro{
+    color: red;
+    display: inline-block;
+    padding: 0.3em;
+}
+
+.cep_label{
+    color: var(--cor_font);
+}
+
+.cep_input{
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.6em;
+    border-radius: 30px;
+    border: 1px solid var(--cor_borda);
+}
+
+.cep_input2{
+    width: 15em;
+    margin: 1em 0.5em;
+    padding: 0.6em;
+    border-radius: 30px;
+    border: 1px solid var(--cor_borda);
+}
+
+.cep_box2{
+    display: flex;
+}
+
+.input_options{
+    padding: 0.4em;
+    border-radius: 30px;
+    border: 1px solid var(--cor_borda)
+}
+
+.cep_box3{
+    display: flex;
+}
+
+.label_uf{
+    margin-bottom: 0.8em;
+}
+
+.div_uf{
+    margin-left: 0.5em;
+}
+
+.select_uf{
+    margin-top: 1em;
+    padding: 0.6em;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4em;
+}
+
+.btn{
+    padding: 1em;
+    margin-right: 0.8em;
+    background-image: var(--cor_fundoheader);
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.btn_reset:hover{
+    color: red;
+    font-size: 14px;
+    transition: 0.6s;
+    font-weight: bold;
+}
+
+.btn_submit:hover{
+    color: green;
+    font-size: 14px;
+    transition: 0.6s;
+    font-weight: bold;
+}
+
+.btn_pesquisa{
+    margin: 2em 0 2em 19.5em;
+    padding: 1.4em 2em;
+    border-radius: 30px;
+}
+
+/* --- FOOTER ---*/
+
+.container_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--cor_fundofooter);
+    margin: 5em 0 0 0;
+    height: 6em;
+}
+
+.footer_texto{
+    font-weight: 200;
+    font-size: 16px;
+    color: white;
+}
+
+.footer_img{
+    transform: scale(0.3);
+}
+
+.email_lucas{
+    padding: 0.2em;
+    text-decoration: underline;
+}
+
+
+
+
+/* --- DARK THEME --- */
+
+.dark,
+.dark body{
+    background-image: linear-gradient(to right, #403958, #2e2847, #1f1a31);
+    color: white;
+    transition: 1s;
+}
+
+.dark .bi-sun{
+    display: none;
+}
+
+.dark .bi-moon{
+    display: block;
+    color: white;
+}
+
+.dark .container_header{
+    background-image: linear-gradient(to right, #2f2450, #18122B, #0a0713);
+    color: white;
+}
+
+.dark .lista_link{
+    text-decoration: none;
+    color: white;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.dark .lista_link:hover{
+    background-color: white;
+    color: #18122B;
+}
+
+.dark legend{
+    background-image: linear-gradient(to right, #635985, #443C68, #27213f);
+    color: white;
+}
+
+.dark label{
+    color: black;
+}
+
+.dark .btn{
+    background-image: linear-gradient(to right, #635985, #443C68, #27213f);
+    color: white;
+}
+
+.dark h1{
+    color: #0a0713;
+}
+
+.dark .container_footer{
+    background-image: linear-gradient(to right, #0a0713, #06040c, #000000)
+}
