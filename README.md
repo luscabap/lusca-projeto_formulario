@@ -16,7 +16,7 @@ O formulário tem 2 campos: 1 para o usuário digitar seus dados pessoais e outr
 O site também possui a função de "Dark Mode" que ficará salvo no LocalStorage do usuário.
 
 
-LINK DO PROJETO: 
+DEPLOY DO PROJETO: https://lusca-projeto-foms.vercel.app/
 
 ---
 
